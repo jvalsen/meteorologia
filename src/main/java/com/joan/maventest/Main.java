@@ -8,12 +8,12 @@ public class Main {
 
         Gson gson = new Gson();
 
-        // Obtener JSON meteorológico
+        //JSON meteorológico
         String jsonMeteo = ServicioMeteo.getMeteo();
         System.out.println("JSON generado:");
         System.out.println(jsonMeteo);
 
-        // Reconstruir objeto desde JSON
+        //objeto desde JSON
         Meteo meteo = gson.fromJson(jsonMeteo, Meteo.class);
         System.out.println("Objeto Meteo:");
         System.out.println(meteo);
